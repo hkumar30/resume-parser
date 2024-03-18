@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Parser</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <!-- <div class="input-group">
+        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Upload</button>
+    </div>
+    <br>
+    <br>
+    <div class="resume-upload input-group input-group-lg">
+        <span class="input-group-text" id="inputGroup-sizing-lg">Name</span>
+        <input type="text" class="form-control" id="resultName" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+        <span class="input-group-text" id="inputGroup-sizing-lg">Email</span>
+        <input type="text" class="form-control" id="resultEmail" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+        <span class="input-group-text" id="inputGroup-sizing-lg">Phone</span>
+        <input type="text" class="form-control" id="resultPhone" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+        <span class="input-group-text" id="inputGroup-sizing-lg">Address</span>
+        <input type="text" class="form-control" id="resultAddress" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+    </div>
+    <br>
+    <br>
+    <div class="resume-upload input-group input-group-lg">
+        <span class="input-group-text">Experience</span>
+    </div>
+    <div>
+        <br>
+        <span class="input-group-text" id="inputGroup-sizing-lg">Title</span>
+        <input type="text" class="form-control" id="resultName" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+        <br>
+        <br>
+        <span class="input-group-text" id="inputGroup-sizing-lg">Company</span>
+        <input type="text" class="form-control" id="resultEmail" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+        <br>
+        <br>
+        <span class="input-group-text" id="inputGroup-sizing-lg">Phone</span>
+        <input type="text" class="form-control" id="resultPhone" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+        <br>
+        <br>
+        <span class="input-group-text" id="inputGroup-sizing-lg">Address</span>
+        <input type="text" class="form-control" id="resultAddress" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+        <br>
+        <br>
+    </div>
+    <br>
+    <br>
+    <span class="input-group-text" id="inputGroup-sizing-lg" style = "width: 80px">Title</span>
+    <input type="text" class="form-control" id="resultTitle1" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"><br>
+    <br>
+    <span class="input-group-text" id="inputGroup-sizing-lg" style = "width: 120px">Company</span>
+    <textarea type="text" class="form-control" id="resultText" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" style = "width: 70em; height: 10em"></textarea> -->
+
+    <form>
+        <div class="row">
+          <div class="col">
+            <label for="resultFirstName">First Name</label>
+            <input type="text" class="form-control" id = "resultFirstName" placeholder="First name">
+          </div>
+          <div class="col">
+            <label for="resultLastName">Last Name</label>
+            <input type="text" class="form-control" id = "resultLastName" placeholder="Last name">
+          </div>
+          <div class="col" style = "padding-top: 20px">
+            <div class="input-group">
+                <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Upload</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+              <label for="resultEmail">Email Address</label>
+              <input type="text" class="form-control" id = "resultEmail" placeholder="example@example.com">
+            </div>
+
+            <div class="col">
+              <label for="resultPhone">Phone</label>
+              <input type="text" class="form-control" id = "resultPhone" placeholder="(123) 456-7890">
+            </div>
+
+            <div class="col">
+                <label for="resultPhone">Bio</label>
+                <textarea type="text" class="form-control" id = "resultBio" placeholder="A short summary of the user in 200 words." style="height: 120px" wrap="hard"></textarea>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <label>Experience</label>
+                    <div class="row">
+                        <div class="col">
+                        <label for="resultTitle1">Title</label>
+                        <input type="text" class="form-control" id = "resultTitle" placeholder="Title/Position Name">
+                        </div>
+            
+                        <div class="col">
+                        <label for="resultCompany1">Company</label>
+                        <input type="text" class="form-control" id = "resultCompany" placeholder="Company Name">
+                        </div>
+
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                  <h5 class="card-title" id = "degree"></h5>
+                                  <h6 class="card-subtitle mb-2 text-muted" id = "university"></h6>
+                                  <p class="card-text" id = "graduationDate"></p>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                        <label for="resultStartDate1">Dates</label>
+                        <input type="text" class="form-control" id = "resultDate" placeholder="Jan 1970 - Mar 2024">
+                        </div>
+            
+                        <div class="col">
+                        <label for="resultLastName">Present</label>
+                        <br>
+                        <input type="checkbox" id = "presentJob">
+                        </div>
+
+                        <div class="col">
+                        </div>
+                    </div>
+                    <br>
+                    <!-- <textarea type="text" class="form-control" id="resultText" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" style = "width: 70em; height: 10em"></textarea> -->
+                </div> 
+            </div>
+        </div>
+      </form>
+
+    <script>
+        const inpFile = document.getElementById("inputGroupFile04");
+        const btnUpload = document.getElementById("inputGroupFileAddon04");
+        const resultFirstName = document.getElementById("resultFirstName");
+        const resultLastName = document.getElementById("resultLastName");
+        const resultEmail = document.getElementById("resultEmail");
+        const resultPhone = document.getElementById("resultPhone");
+        const resultBio = document.getElementById("resultBio");
+        const resultTitle = document.getElementById("resultTitle");
+        const resultCompany = document.getElementById("resultCompany");
+        const resultDate = document.getElementById("resultDate");
+        const resultText = document.getElementById("resultText");
+        const resultDegree = document.getElementById("degree");
+        const resultUniversity = document.getElementById("university");
+        const resultGradDate = document.getElementById("graduationDate");
+
+        btnUpload.addEventListener("click", () => {
+            const formData = new FormData();
+            formData.append("pdfFile", inpFile.files[0]);
+
+            fetch("/extract-text", {
+                method: "post",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.text) {
+                    return fetch("/parse-text", {
+                        method: "post",
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ text: data.text }),
+                    });
+                } else {
+                    throw new Error('Text extraction failed');
+                }
+            })
+            .then(response => response.json())
+            .then(parsedData => {
+                if (parsedData.success) {
+                    // Assuming the parsedData.data contains the structured data you want to display
+                    // For example, if the OpenAI response returns an object with name, email, etc.
+                    // You may need to adjust depending on the structure of your response
+                    sessionStorage.setItem('form', parsedData.data);
+                    const obj = JSON.parse(parsedData.data);
+                    resultFirstName.value = JSON.parse(obj).firstName;
+                    resultLastName.value = JSON.parse(obj).lastName;
+                    resultEmail.value = JSON.parse(obj).email;
+                    resultPhone.value = JSON.parse(obj).phone;
+                    resultBio.value = JSON.parse(obj).biography;
+                    resultTitle.value = JSON.parse(obj).experience[0].title;
+                    resultCompany.value = JSON.parse(obj).experience[0].company;
+                    resultDate.value = JSON.parse(obj).experience[0].dates;
+                    resultDegree.innerHTML = JSON.parse(obj).education.degree;
+                    resultUniversity.innerHTML = JSON.parse(obj).education.university;
+                    resultGradDate.innerHTML = JSON.parse(obj).education.graduationDate;
+                    resultText.value = obj;
+
+                    if(resultDate.value.includes('Present')){
+                        document.getElementById('presentJob').checked = true;
+                    }
+                } else {
+                    throw new Error('Text parsing failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                resultText.value = error.message;
+            });
+        });
+
+        window.onload = function() {
+            const obj = JSON.parse(sessionStorage.getItem('form'));
+            resultFirstName.value = JSON.parse(obj).firstName;
+            resultLastName.value = JSON.parse(obj).lastName;
+            resultEmail.value = JSON.parse(obj).email;
+            resultPhone.value = JSON.parse(obj).phone;
+            resultBio.value = JSON.parse(obj).biography;
+            resultTitle.value = JSON.parse(obj).experience[0].title;
+            resultCompany.value = JSON.parse(obj).experience[0].company;
+            resultDate.value = JSON.parse(obj).experience[0].dates;
+            resultDegree.innerHTML = JSON.parse(obj).education.degree;
+            resultUniversity.innerHTML = JSON.parse(obj).education.university;
+            resultGradDate.innerHTML = JSON.parse(obj).education.graduationDate;
+            resultText.value = obj;
+
+            if(resultDate.value.includes('Present') || resultDate.value.includes('Expected')){
+                document.getElementById('presentJob').checked = true;
+            }
+        }
+        
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
